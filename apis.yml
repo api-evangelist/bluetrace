@@ -1,23 +1,81 @@
 aid: bluetrace
+
 name: BlueTrace
-description: 'BlueTrace is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.blue-trace.com/hubfs/162bb25f-5940-435d-9eb5-af8db4339105%202.jpg
+
+description: 'BlueTrace provides a cloud‑based platform that streamlines seafood supply‑chain operations, offering tools for inventory management, order processing, pricing, traceability, and compliance. Their solution connects distributors, processors, and retailers, enabling real‑time data sharing, automated invoicing, and analytics to improve efficiency and sustainability across the seafood industry.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bluetrace/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-29 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-29'
+
 modified: '2026-09-29'
+
 tags:
 - Company
-apis: []
+- Seafood
+- Supply Chain
+- SaaS
+- Traceability
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/bluetrace-well-known.yml
+- type: Hosts
+  url: hosts/bluetrace-hosts.yml
+- type: Vendors
+  url: vendors/bluetrace-vendors.yml
+- type: TermsOfService
+  url: https://www.blue-trace.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.blue-trace.com/privacy-policy
+- type: Newsroom
+  url: https://www.blue-trace.com/press
+- type: GettingStarted
+  url: https://help.blue-trace.com/knowledge/how-do-i-setup-quantities-for-my-items
+- type: DomainSecurity
+  url: security/bluetrace-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.blue-trace.com/
+
+- type: Documentation
+  url: https://help.blue-trace.com/knowledge
+- type: Blog
+  url: https://blog.blue-trace.com/blog
+- type: Pricing
+  url: https://www.blue-trace.com/get-a-demo
+- type: SignUp
+  url: https://app.blue-trace.com/login
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Documentation is provided as HTML pages without any machine‑readable OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL specifications.
+  evidence:
+    - url: https://help.blue-trace.com/knowledge
+      status: 200
+  checked: '2026-09-29'
+x-enrichment:
+  date: '2026-09-29'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
